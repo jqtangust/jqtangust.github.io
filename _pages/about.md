@@ -1,8 +1,7 @@
 ---
-layout: about
-title: about
+layout: About
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -13,8 +12,6 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-
-### Hi 👋, I'm Jiaqi Tang 
 
 🎓 I am currently a __Ph.D. student in Artificial Intelligence__ at The Hong Kong University of Science and Technology (HKUST).
 
