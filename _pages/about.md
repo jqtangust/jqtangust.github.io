@@ -8,6 +8,7 @@ profile:
   align: right
   image: selfie.jpg
   image_circular: false # crops the image to make it circular
+  description: @ Kraków, Poland
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
