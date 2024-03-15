@@ -1,3 +1,6 @@
+
+<meta name="google-site-verification" content="qW7oLWgyC0YBEUY1yQ_qw1tku3tZykZnDFRWX6nxy-Y" />
+
 ---
 layout: about
 title: about
