@@ -13,4 +13,4 @@ nav_order: 3
 + __Tencent Scholarship (First Class)__, by Tencent in 2021
 + __First Class Scholarship__, by Northwestern Polytechnical University in 2021
 + __Winner Award__, NTIRE-CVPR (New Trends in Image Restoration and Enhancement) Challenge on Multi-modal Aerial View Object Classification, Track 1 (SAR) in 2021
-+ __Second Class Scholarship__, by Northwestern Polytechnical University in 2021
++ __Second Class Scholarship__, by Northwestern Polytechnical University in 2020
