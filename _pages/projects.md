@@ -15,4 +15,6 @@ nav_order: 3
 + __Winner Award__, NTIRE-CVPR (New Trends in Image Restoration and Enhancement) Challenge on Multi-modal Aerial View Object Classification, Track 1 (SAR) in 2021
 + __Second Class Scholarship__, by Northwestern Polytechnical University in 2020
 
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=50zngmk1vf4&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;br=5&amp;sx=0" async="async"></script>
+
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/1.js?i=5ors4hqjmfb&amp;s=330&amp;m=8&amp;v=true&amp;r=false&amp;b=000000&amp;n=true&amp;c=ff0000" async="async"></script>
