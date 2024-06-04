@@ -21,4 +21,4 @@ social: true # includes social icons at the bottom of the page
 
 🔍 I specialize in *Low-level Computer Vision*, *Large Vision-Language Model*, and *Multi-Modelity*. If you want to talk with me, feel free to [**connect**](mailto:jtang092@connect.ust.hk).
 
-**I am looking for a large model Research Internship, and if you think there is a position for me, please [**let me know.**](mailto:jtang092@connect.ust.hk)**
+**I am looking for a large model Research Internship, and if you think there is a position for me, please [let me know.](mailto:jtang092@connect.ust.hk)**
