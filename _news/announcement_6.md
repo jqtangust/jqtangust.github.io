@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-04-02
+date: 2024-07-01
 inline: true
 related_posts: false
 ---
 
-One survey is accepted by CVPRW2024.
+One paper is accepted by ECCV2024.
