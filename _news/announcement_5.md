@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One survey is accepted by CVPRW2024 (Oral).
+One survey is accepted by CVPRW2024 (__Oral__).
