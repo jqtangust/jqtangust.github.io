@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: <a href='https://maps.app.goo.gl/WfF791hxib6Aj2Bi6'> CSE Lab, Academic Building, HKUST, New Territories, Hong Kong </a>
+<a href='https://maps.app.goo.gl/WfF791hxib6Aj2Bi6'> E3, HKUST(GZ), 1st Duxue Rd, Nansha, Guangzhou, Mainland China </a>
 
 profile:
   align: right
