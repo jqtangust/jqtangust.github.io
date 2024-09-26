@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://maps.app.goo.gl/WfF791hxib6Aj2Bi6'> CSE Lab, Academic Building, HKUST, New Territories, Hong Kong </a>
+subtitle: <a href='https://maps.app.goo.gl/gRmHZCrrLQ7ex5Jd6'> Hangzhou, China </a>
 
 profile:
   align: right
