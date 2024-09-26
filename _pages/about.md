@@ -19,4 +19,4 @@ social: true # includes social icons at the bottom of the page
 
 💼 I also maintain strong collaborations with the industry. I work closely with [Dr. Xiaogang Xu](https://xuxiaogang.com/) from __Huawei 2012 Lab__, [Mr. Qingguo Chen](https://scholar.google.com/citations?hl=en&user=GlqRHLcAAAAJ&view_op=list_works&sortby=pubdate) and [Mr. Yifeng Wu]() at __Alibaba Group__, [Dr. Jiangbo Lu](https://sites.google.com/site/jiangbolu/) (CTO), [Dr. Sixing Hu](https://david-husx.github.io/) (Director of Digital Media & Imaging) and [Dr. Ruizheng Wu](https://scholar.google.com/citations?user=OOagpAcAAAAJ&hl=en) at [__SmartMore Corporation__](https://global.smartmore.com/).
 
-🔍 Currently, my research focuses on __Large Multi-Modalities Model__. If you want to work| with me, please feel free to [**contact**](mailto:jtang092@connect.hkust-gz.edu.cn).
+🔍 Currently, my research focuses on __Large Multi-Modalities Model__. If you are interested in collaborating with me, please feel free to [**contact**](mailto:jtang092@connect.hkust-gz.edu.cn) me.
