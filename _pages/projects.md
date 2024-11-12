@@ -7,7 +7,8 @@ nav: true
 nav_order: 3
 ---
 
-+ __SmartMore Rising Star Award__, by SmartMore Corporation in 2023
++ __Best Paper Honorable Mention__, by ACM SenSys 2024.
++ __Best Research Intern__, by SmartMore Corporation in 2023
 + __Postgraduate Studentship__, by The Hong Kong University of Science and Technology (Guangzhou) from 2022 to 2025
 + __Distinguished Graduate Student Award__, by Northwestern Polytechnical University in 2022
 + __National Scholarship (Top 1/44)__, by The Ministry of Education of the People's Republic of China in 2021
