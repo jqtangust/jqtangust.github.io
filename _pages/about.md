@@ -6,9 +6,9 @@ subtitle: <a href='https://maps.app.goo.gl/gRmHZCrrLQ7ex5Jd6'> Hangzhou, China <
 
 profile:
   align: right
-  image: seattle.jpg
+  image: Dolomites.jpg
   image_circular: false # crops the image to make it circular
-  more_info: Captured at Seattle, WA, USA
+  more_info: Captured at Dolomites, Italy
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
