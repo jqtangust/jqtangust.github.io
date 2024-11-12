@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-🎓 I am an **incoming Ph.D. student** in the Department of Computer Science and Engineering at the Hong Kong University of Science and Technology and will transfer to Clear Water Bay in Fall 2025.
+🎓 I am an **incoming Ph.D. student** in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology](https://www.hkust.hk/) and will transfer to Clear Water Bay in Fall 2025.
 
 Currently, I am pursuing my __M.Phil. in Artificial Intelligence__ at [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/), supervised by [Prof. Ying-Cong Chen](https://www.yingcong.me/) and [Prof. Qifeng Chen](https://cqf.io/). Before that, I obtained a __B.Eng. in Data Science and Big Data Tech.__, from the [School of Computer Science, Northwestern Polytechnical University (NWPU)](https://jsj.nwpu.edu.cn/), supervised by [Prof. Wei Wei](https://teacher.nwpu.edu.cn/weiwei.html) and a __Minor in Business Administration__ from the [School of Management](https://som.nwpu.edu.cn/) in 2022.
 
