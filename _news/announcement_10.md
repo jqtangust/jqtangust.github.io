@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper is accepted by CVPR2025 (Highlight).
+One paper is accepted by CVPR2025 **Highlight (Top 2.9\%)**.
