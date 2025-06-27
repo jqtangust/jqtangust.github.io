@@ -21,4 +21,4 @@ Currently, I have finished __M.Phil. in Artificial Intelligence__ at [Hong Kong 
 
 I maintain strong industry collaborations, working closely with [Dr. Xiaogang Xu](https://xuxiaogang.com/) from __Huawei 2012 Lab__, [Mr. Qingguo Chen](https://scholar.google.com/citations?hl=en&user=GlqRHLcAAAAJ&view_op=list_works&sortby=pubdate) and [Mr. Yifeng Wu](https://openreview.net/profile?id=~Yi-Feng_Wu2) at __Alibaba Group__, [Dr. Jiangbo Lu](https://sites.google.com/site/jiangbolu/) and [Dr. Sixing Hu](https://david-husx.github.io/) at [__SmartMore Corporation__](https://global.smartmore.com/).
 
-My research focuses on __Multi-modal Large Language Model__. If you are interested in collaborating with me, please feel free to [**contact**](mailto:jtang092@connect.hkust-gz.edu.cn).
+My research focuses on __Multi-modal Large Language Models (MLLMs)__. If you are interested in collaborating with me, please feel free to [**contact**](mailto:jtang092@connect.hkust-gz.edu.cn).
