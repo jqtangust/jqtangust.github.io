@@ -103,7 +103,9 @@
                                 <td style="padding:16px;width:100%;vertical-align:middle">
                                     <h2>News</h2>
                                     <p>
-                                        • <strong>May 2026:</strong> One paper is accepted by ICML2026.<br>
+                                        • <strong>Jun 2026:</strong> We released the code, models, and online demo of
+                                        <a href="https://github.com/jqtangust/Robust-U1">Robust-U1</a>.<br>
+                                        • <strong>May 2026:</strong> Robust-U1 is accepted by ICML2026.<br>
                                         • <strong>Apr 2026:</strong> One paper is accepted by ISBRA2026.<br>
                                         • <strong>Apr 2026:</strong> Three papers are accepted by ACL2026 (2 Main + 1
                                         Findings).<br>
@@ -223,6 +225,53 @@
                     <table
                         style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
+
+                            <tr onmouseout="robustu1_stop()" onmouseover="robustu1_start()" bgcolor="#ffffd0">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='robustu1_image'>
+                                            <img src='images/robustu1.png' width=100%>
+                                        </div>
+                                        <img src='images/robustu1.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function robustu1_start() {
+                                            document.getElementById('robustu1_image').style.opacity = "1";
+                                        }
+
+                                        function robustu1_stop() {
+                                            document.getElementById('robustu1_image').style.opacity = "0";
+                                        }
+                                        robustu1_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <a href="https://arxiv.org/abs/2606.08063">
+                                        <span class="papertitle">Robust-U1: Can MLLMs Self-Recover Corrupted Visual
+                                            Content for Robust Understanding?</span>
+                                    </a>
+                                    <br>
+                                    <strong>Jiaqi Tang*</strong>, Jianmin Chen*, Youyang Zhai*, Wei Wei†, Runtao Liu,
+                                    Mengjie Zhao, Xiangyu Wu, Qingfa Xiao, Qifeng Chen†
+                                    <br>
+                                    <em>International Conference on Machine Learning (ICML)</em>, 2026
+                                    <br>
+                                    <a href="https://arxiv.org/abs/2606.08063">arXiv</a>
+                                    /
+                                    <a href="https://github.com/jqtangust/Robust-U1">code</a>
+                                    /
+                                    <a href="https://huggingface.co/Jiaqi-hkust/Robust-U1">model</a>
+                                    /
+                                    <a href="https://huggingface.co/spaces/Jiaqi-hkust/Robust-U1">demo</a>
+                                    /
+                                    <a href="data/TangICML2026_RobustU1.bib">bibtex</a>
+                                    <p></p>
+                                    <p>
+                                        A unified MLLM that <strong>self-recovers</strong> corrupted visual content and
+                                        reasons over it for robust visual understanding.
+                                    </p>
+                                </td>
+                            </tr>
 
                             <tr onmouseout="robustr1_stop()" onmouseover="robustr1_start()" bgcolor="#ffffd0">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
