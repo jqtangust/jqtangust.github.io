@@ -81,6 +81,25 @@ a:hover {
   text-decoration: none;
 }
 
+.social-icon {
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 2px;
+  fill: currentColor;
+  vertical-align: -0.08em;
+}
+
+.social-icon-huggingface {
+  width: 1em;
+  height: 1em;
+  margin-right: 2px;
+  vertical-align: -0.12em;
+}
+
+.social-icon-x {
+  margin-right: 0;
+}
+
 body,
 td,
 th,
