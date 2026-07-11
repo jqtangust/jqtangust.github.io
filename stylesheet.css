@@ -109,6 +109,12 @@ h2 {
   font-weight: 700;
 }
 
+.paper-distinction {
+  color: red;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .name {
   padding-top: 20px;
   margin: 0;
@@ -146,4 +152,187 @@ span.highlight {
   padding: 20px;
   display: inline-block;
   border-radius: 10px;
+}
+
+.experience-list {
+  width: 100%;
+  margin: 10px auto 0;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 20% minmax(0, 1fr) 92px;
+  column-gap: 16px;
+  align-items: center;
+  padding: 15px 8px;
+  border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+}
+
+.experience-item:first-child {
+  border-top: 1px solid #ececec;
+}
+
+.experience-logo {
+  padding: 0 12px;
+  text-align: center;
+}
+
+.experience-content {
+  min-width: 0;
+}
+
+.experience-logo-image {
+  display: block;
+  max-width: 100%;
+  max-height: 58px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.logo-hunyuan {
+  width: 128px;
+}
+
+.logo-deeproute {
+  width: 76px;
+}
+
+.logo-sony {
+  width: 104px;
+}
+
+.logo-alibaba {
+  width: 122px;
+}
+
+.logo-ovis {
+  width: 74px;
+  margin-top: 10px;
+}
+
+.logo-smartmore {
+  width: 128px;
+}
+
+.experience-company {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.experience-meta {
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.experience-role {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.experience-program {
+  font-weight: 400;
+}
+
+.experience-date {
+  align-self: start;
+  padding-top: 1px;
+  color: #7a7a7a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.experience-location {
+  margin-left: 8px;
+  color: #7a7a7a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.experience-location::before {
+  margin-right: 8px;
+  color: #b0b0b0;
+  content: "·";
+}
+
+.experience-description {
+  margin: 6px 0 0;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.experience-host {
+  display: block;
+  margin-top: 2px;
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.award-list {
+  margin-top: 10px;
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  column-gap: 16px;
+  align-items: start;
+  padding: 2px 0;
+  line-height: 1.45;
+}
+
+.award-year {
+  color: #7a7a7a;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .experience-item {
+    grid-template-columns: 24% minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 13px 0;
+  }
+
+  .experience-logo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding: 0 8px;
+  }
+
+  .experience-content {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .experience-date {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    margin-bottom: 3px;
+    padding: 0;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .experience-location {
+    display: block;
+    margin: 2px 0 0;
+  }
+
+  .experience-location::before {
+    display: none;
+  }
+
+  .award-item {
+    column-gap: 10px;
+  }
 }
