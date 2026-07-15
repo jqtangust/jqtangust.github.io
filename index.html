@@ -247,6 +247,49 @@
                         style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
 
+                            <tr onmouseout="iqat1_stop()" onmouseover="iqat1_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='iqat1_image'>
+                                            <img src='images/IQAT1.png' width=100%>
+                                        </div>
+                                        <img src='images/IQAT1.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function iqat1_start() {
+                                            document.getElementById('iqat1_image').style.opacity = "1";
+                                        }
+
+                                        function iqat1_stop() {
+                                            document.getElementById('iqat1_image').style.opacity = "0";
+                                        }
+                                        iqat1_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <a href="https://arxiv.org/abs/2607.12375">
+                                        <span class="papertitle">IQA-T1: Tool-based Visual Evidence Reasoning for Image
+                                            Quality Assessment</span>
+                                    </a>
+                                    <br>
+                                    Jinjian Wu*, <strong>Jiaqi Tang*</strong>, Wei Wei†, Yingying Yan, Jianmin Chen,
+                                    Botong Geng, Lei Zhang, Qifeng Chen†
+                                    <br>
+                                    <em>European Conference on Computer Vision (ECCV)</em>, 2026
+                                    <br>
+                                    <a href="https://arxiv.org/abs/2607.12375">arXiv</a>
+                                    /
+                                    <a href="https://github.com/zibuyu-02/IQA-T1">code</a>
+                                    /
+                                    <a href="data/WuECCV2026_IQAT1.bib">bibtex</a>
+                                    <p></p>
+                                    <p>
+                                        Tool-based visual evidence reasoning for interpretable and generalizable image
+                                        quality assessment.
+                                    </p>
+                                </td>
+                            </tr>
+
                             <tr onmouseout="robustu1_stop()" onmouseover="robustu1_start()" bgcolor="#ffffd0">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
                                     <div class="one">

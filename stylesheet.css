@@ -145,12 +145,20 @@ h2 {
   width: 160px;
   height: 160px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .two {
   width: 160px;
   height: 160px;
   position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -175,7 +183,7 @@ span.highlight {
 
 .experience-list {
   width: 100%;
-  margin: 10px auto 0;
+  margin: 1em auto;
 }
 
 .experience-item {
@@ -183,7 +191,7 @@ span.highlight {
   grid-template-columns: 20% minmax(0, 1fr) 92px;
   column-gap: 16px;
   align-items: center;
-  padding: 15px 8px;
+  padding: 8px;
   border-bottom: 1px solid #ececec;
   box-sizing: border-box;
 }
@@ -294,7 +302,7 @@ span.highlight {
 }
 
 .award-list {
-  margin-top: 10px;
+  margin: 1em 0;
 }
 
 .award-item {
@@ -302,8 +310,7 @@ span.highlight {
   grid-template-columns: minmax(0, 1fr) 44px;
   column-gap: 16px;
   align-items: start;
-  padding: 2px 0;
-  line-height: 1.45;
+  padding: 0;
 }
 
 .award-year {
@@ -318,7 +325,7 @@ span.highlight {
   .experience-item {
     grid-template-columns: 24% minmax(0, 1fr);
     column-gap: 12px;
-    padding: 13px 0;
+    padding: 8px 0;
   }
 
   .experience-logo {
