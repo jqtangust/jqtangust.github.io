@@ -321,6 +321,25 @@ span.highlight {
   white-space: nowrap;
 }
 
+.teaching-list {
+  margin: 1em 0;
+}
+
+.teaching-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 82px;
+  column-gap: 16px;
+  align-items: start;
+  padding: 0;
+}
+
+.teaching-term {
+  color: #7a7a7a;
+  font-size: 13px;
+  text-align: right;
+  white-space: nowrap;
+}
+
 @media (max-width: 600px) {
   .experience-item {
     grid-template-columns: 24% minmax(0, 1fr);
@@ -359,6 +378,10 @@ span.highlight {
   }
 
   .award-item {
+    column-gap: 10px;
+  }
+
+  .teaching-item {
     column-gap: 10px;
   }
 }
