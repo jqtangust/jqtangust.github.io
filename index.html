@@ -790,10 +790,27 @@
                     <table
                         style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
-                            <tr>
-                                <td style="padding:16px;width:20%;vertical-align:middle"></td>
+                            <tr onmouseout="forecast_agents_stop()" onmouseover="forecast_agents_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='forecast_agents_image'>
+                                            <img src='images/forecast_agents.png' width=100%>
+                                        </div>
+                                        <img src='images/forecast_agents.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function forecast_agents_start() {
+                                            document.getElementById('forecast_agents_image').style.opacity = "1";
+                                        }
+
+                                        function forecast_agents_stop() {
+                                            document.getElementById('forecast_agents_image').style.opacity = "0";
+                                        }
+                                        forecast_agents_stop()
+                                    </script>
+                                </td>
                                 <td style="padding:8px;width:80%;vertical-align:middle">
-                                    <a href="#">
+                                    <a href="https://arxiv.org/abs/2608.23058">
                                         <span class="papertitle">LLM-based Agents for Forecasting and Prediction:
                                             Methods, Training, Evaluation, and Applications</span>
                                     </a>
