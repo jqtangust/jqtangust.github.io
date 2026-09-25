@@ -9,6 +9,104 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style>
+        .travel-map {
+            margin-top: 14px;
+            padding: 18px;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            background: #f7f9fb;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .travel-map-canvas {
+            position: relative;
+        }
+
+        .travel-map-canvas > img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .travel-map-caption {
+            margin: 8px 0 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .travel-pin {
+            position: absolute;
+            box-sizing: border-box;
+            width: 12px;
+            height: 12px;
+            padding: 0;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            background: #1772d0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.3);
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: transform .15s ease-in-out, background-color .15s ease-in-out;
+        }
+
+        .travel-pin:hover,
+        .travel-pin:focus-visible,
+        .travel-pin.is-active {
+            z-index: 1;
+            background: #f09228;
+            transform: translate(-50%, -50%) scale(1.35);
+        }
+
+        .travel-popup {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+            box-sizing: border-box;
+            max-width: 100%;
+            padding: 8px;
+            overflow-x: auto;
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        .travel-popup[hidden] {
+            display: none;
+        }
+
+        .travel-popup-item {
+            flex: 0 0 180px;
+        }
+
+        .travel-popup-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 240px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .travel-popup-item p {
+            margin: 6px 2px 0;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            .travel-map {
+                padding: 8px;
+            }
+
+            .travel-pin {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
         .travel-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -46,7 +144,7 @@
 
 <body>
     <table
-        style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody>
             <tr style="padding:0px">
                 <td style="padding:0px">
@@ -73,56 +171,74 @@
                                     <p>
                                         This gallery captures the places that shaped my research journey and life adventures.
                                     </p>
+                                    <div id="travel-map" class="travel-map" role="region"
+                                        aria-label="Map of places I have visited" hidden>
+                                        <div class="travel-map-canvas">
+                                            <img src="images/world-map.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p id="travel-map-caption" class="travel-map-caption" hidden></p>
                                     <div class="travel-grid">
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="55.6761" data-lng="12.5683"
+                                            data-country="Denmark">
                                             <a href="travel/Copenhagen.jpg"><img src="travel/Copenhagen.jpg"
                                                     alt="Copenhagen"></a>
                                             <p>Captured at Copenhagen, Denmark. Visited in Sep 2026 for ECCV2026.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="37.5665" data-lng="126.9780"
+                                            data-country="South Korea">
                                             <a href="travel/Seoul.png"><img src="travel/Seoul.png" alt="Seoul"></a>
                                             <p>Captured at Seoul, South Korea. Visited in Jul 2026 for ICML 2026.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="1.3521" data-lng="103.8198"
+                                            data-country="Singapore">
                                             <a href="travel/Singapore.jpg"><img src="travel/Singapore.jpg"
                                                     alt="Singapore"></a>
                                             <p>Captured at Singapore. Visited in Jan 2026 for AAAI2026.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="34.6937" data-lng="135.5023"
+                                            data-country="Japan">
                                             <a href="travel/Osaka.jpg"><img src="travel/Osaka.jpg" alt="Osaka"></a>
                                             <p>Captured at Osaka, Japan. Visited in Oct 2025 for EXPO2025.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="35.6762" data-lng="139.6503"
+                                            data-country="Japan">
                                             <a href="travel/Tokyo.jpg"><img src="travel/Tokyo.jpg" alt="Tokyo"></a>
                                             <p>Captured at Tokyo, Japan. Visited in Aug 2025.<!-- when I was an intern at
                                                 Sony --></p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="30.2741" data-lng="120.1551"
+                                            data-country="China">
                                             <a href="travel/Hangzhou.jpg"><img src="travel/Hangzhou.jpg"
                                                     alt="Hangzhou"></a>
                                             <p>Captured at Hangzhou, China. Visited in May 2025.<!-- during my internship at
                                                 Alibaba --></p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="46.4102" data-lng="11.8440"
+                                            data-country="Italy">
                                             <a href="travel/Dolomites.jpg"><img src="travel/Dolomites.jpg"
                                                     alt="Dolomites"></a>
                                             <p>Captured at Dolomites, Italy. Visited in Oct 2024 for ECCV2024.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="22.3193" data-lng="114.1694"
+                                            data-country="China">
                                             <a href="travel/HongKong.jpg"><img src="travel/HongKong.jpg"
                                                     alt="Hong Kong"></a>
                                             <p>Captured at Hong Kong, China. Visited in Mar 2024 during my exchange at
                                                 HKUST.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="47.6062" data-lng="-122.3321"
+                                            data-country="USA">
                                             <a href="travel/Seattle.jpg"><img src="travel/Seattle.jpg" alt="Seattle"></a>
                                             <p>Captured at Seattle, USA. Visited in Jun 2024 for CVPR2024.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="50.0647" data-lng="19.9450"
+                                            data-country="Poland">
                                             <a href="travel/Krakow.jpg"><img src="travel/Krakow.jpg" alt="Krakow"></a>
                                             <p>Captured at Krakow, Poland. Visited in Sep 2023 for ECAI2023.</p>
                                         </div>
-                                        <div class="travel-card">
+                                        <div class="travel-card" data-lat="-37.8136" data-lng="144.9631"
+                                            data-country="Australia">
                                             <a href="travel/Melbourne.jpg"><img src="travel/Melbourne.jpg"
                                                     alt="Melbourne"></a>
                                             <p>Captured at Melbourne, Australia. Visited in Jan 2020, before COVID, for a
@@ -138,6 +254,115 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        (function () {
+            var mapEl = document.getElementById('travel-map');
+            var canvas = mapEl.querySelector('.travel-map-canvas');
+            var captionEl = document.getElementById('travel-map-caption');
+            var cards = document.querySelectorAll('.travel-card[data-lat][data-lng]');
+            if (!cards.length) return;
+
+            // Pin positions must match images/world-map.svg: Miller projection cropped to 84°N-58°S.
+            function millerY(lat) {
+                return 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * Math.PI / 180));
+            }
+            var yTop = millerY(84), yBottom = millerY(-58);
+
+            var places = {};
+            var countries = {};
+            cards.forEach(function (card) {
+                var key = card.dataset.lat + ',' + card.dataset.lng;
+                if (!places[key]) {
+                    var pin = document.createElement('button');
+                    pin.type = 'button';
+                    pin.className = 'travel-pin';
+                    pin.setAttribute('aria-label', card.querySelector('img').alt);
+                    pin.style.left = (+card.dataset.lng + 180) / 360 * 100 + '%';
+                    pin.style.top = (yTop - millerY(+card.dataset.lat)) / (yTop - yBottom) * 100 + '%';
+                    canvas.appendChild(pin);
+                    places[key] = { pin: pin, cards: [] };
+                }
+                places[key].cards.push(card);
+                if (card.dataset.country) countries[card.dataset.country] = true;
+            });
+            var list = Object.keys(places).map(function (key) { return places[key]; });
+
+            var popup = document.createElement('div');
+            popup.className = 'travel-popup';
+            popup.hidden = true;
+            canvas.appendChild(popup);
+
+            var current = null;
+            var hideTimer;
+
+            function position() {
+                var x = current.pin.offsetLeft, y = current.pin.offsetTop;
+                var w = popup.offsetWidth, h = popup.offsetHeight;
+                popup.style.left = Math.max(0, Math.min(x - w / 2, canvas.clientWidth - w)) + 'px';
+                popup.style.top = (y - h - 14 >= 0 ? y - h - 14 : y + 14) + 'px';
+            }
+
+            function show(place) {
+                clearTimeout(hideTimer);
+                if (place === current) return;
+                current = place;
+                // Pins closer than their own width overlap (e.g. Osaka and Tokyo), so they share one popup.
+                var near = list.filter(function (other) {
+                    return Math.hypot(other.pin.offsetLeft - place.pin.offsetLeft,
+                        other.pin.offsetTop - place.pin.offsetTop) < place.pin.offsetWidth + 4;
+                });
+                near.sort(function (a, b) { return (a !== place) - (b !== place); });
+                popup.textContent = '';
+                near.forEach(function (p) {
+                    p.cards.forEach(function (card) {
+                        var item = document.createElement('div');
+                        item.className = 'travel-popup-item';
+                        item.appendChild(card.querySelector('a').cloneNode(true));
+                        item.appendChild(card.querySelector('p').cloneNode(true));
+                        item.querySelector('img').addEventListener('load', function () {
+                            if (current) position();
+                        });
+                        popup.appendChild(item);
+                    });
+                });
+                list.forEach(function (p) { p.pin.classList.toggle('is-active', near.indexOf(p) !== -1); });
+                popup.hidden = false;
+                position();
+            }
+
+            function hide() {
+                clearTimeout(hideTimer);
+                current = null;
+                popup.hidden = true;
+                list.forEach(function (p) { p.pin.classList.remove('is-active'); });
+            }
+
+            function hideSoon() {
+                clearTimeout(hideTimer);
+                hideTimer = setTimeout(hide, 200);
+            }
+
+            list.forEach(function (place) {
+                place.pin.addEventListener('mouseenter', function () { show(place); });
+                place.pin.addEventListener('focus', function () { show(place); });
+                place.pin.addEventListener('click', function (e) { e.stopPropagation(); show(place); });
+                place.pin.addEventListener('mouseleave', hideSoon);
+                place.pin.addEventListener('blur', hideSoon);
+            });
+            popup.addEventListener('mouseenter', function () { clearTimeout(hideTimer); });
+            popup.addEventListener('mouseleave', hideSoon);
+            popup.addEventListener('focusin', function () { clearTimeout(hideTimer); });
+            popup.addEventListener('focusout', hideSoon);
+            document.addEventListener('click', function (e) { if (!popup.contains(e.target)) hide(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+            window.addEventListener('resize', function () { if (current) position(); });
+
+            mapEl.hidden = false;
+            captionEl.hidden = false;
+            captionEl.textContent = list.length + ' places across ' + Object.keys(countries).length +
+                ' countries. Hover over or tap a pin to see the photo.';
+        })();
+    </script>
 </body>
 
 </html>
