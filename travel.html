@@ -41,7 +41,8 @@
 
         .travel-pin:hover,
         .travel-pin:focus-visible,
-        .travel-pin.is-active {
+        .travel-pin.is-active,
+        .travel-pin.is-lit {
             z-index: 2;
             background: #f09228;
             transform: translate(-50%, -50%) scale(1.35);
@@ -114,6 +115,80 @@
             color: #444;
         }
 
+        .travel-strip {
+            /* Zero width keeps the long track from stretching the page's layout table. */
+            width: 0;
+            min-width: 100%;
+            margin-top: 28px;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+        }
+
+        .travel-strip-track {
+            display: flex;
+            width: max-content;
+            animation: travel-strip-scroll 60s linear infinite;
+        }
+
+        .travel-strip:hover .travel-strip-track {
+            animation-play-state: paused;
+        }
+
+        .travel-strip-item {
+            position: relative;
+            flex: none;
+            margin-right: 12px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .travel-strip-item img {
+            display: block;
+            width: auto;
+            height: 180px;
+        }
+
+        .travel-strip-item span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 22px 10px 8px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #fff;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+        }
+
+        .travel-strip-item small {
+            display: block;
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+
+        @keyframes travel-strip-scroll {
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .travel-strip {
+                overflow-x: auto;
+            }
+
+            .travel-strip-track {
+                animation: none;
+            }
+
+            .travel-strip-item[aria-hidden="true"] {
+                display: none;
+            }
+        }
+
         @media (max-width: 600px) {
             .travel-pin {
                 width: 10px;
@@ -123,6 +198,10 @@
             .travel-pin.is-plain {
                 width: 8px;
                 height: 8px;
+            }
+
+            .travel-strip-item img {
+                height: 130px;
             }
         }
     </style>
@@ -163,6 +242,7 @@
                                             <img src="images/world-map.svg" width="1000" height="501" alt="">
                                         </div>
                                     </div>
+                                    <div id="travel-strip" class="travel-strip" hidden></div>
                                     <template id="travel-places">
                                         <div class="travel-card" data-lat="55.6761" data-lng="12.5683"
                                             data-country="Denmark">
@@ -510,8 +590,50 @@
             popup.addEventListener('focusout', hideSoon);
             document.addEventListener('click', function (e) { if (!popup.contains(e.target)) hide(); });
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+            // Scrolling strip: two copies of the photos side by side, so sliding the track left by half
+            // its width loops seamlessly.
+            var strip = document.getElementById('travel-strip');
+            var track = document.createElement('div');
+            track.className = 'travel-strip-track';
+            [false, true].forEach(function (copy) {
+                list.forEach(function (place) {
+                    place.cards.forEach(function (card) {
+                        var link = card.querySelector('a');
+                        if (!link) return;
+                        var item = link.cloneNode(true);
+                        var text = card.querySelector('p').textContent.replace(/\s+/g, ' ').trim();
+                        var when = /Visited in ([A-Z][a-z]{2} \d{4})/.exec(text);
+                        var label = document.createElement('span');
+                        label.textContent = item.querySelector('img').alt;
+                        if (when) {
+                            var date = document.createElement('small');
+                            date.textContent = when[1];
+                            label.appendChild(date);
+                        }
+                        item.className = 'travel-strip-item';
+                        item.title = text;
+                        item.appendChild(label);
+                        if (copy) {
+                            item.setAttribute('aria-hidden', 'true');
+                            item.tabIndex = -1;
+                        }
+                        item.addEventListener('mouseenter', function () { place.pin.classList.add('is-lit'); });
+                        item.addEventListener('mouseleave', function () { place.pin.classList.remove('is-lit'); });
+                        track.appendChild(item);
+                    });
+                });
+            });
+            strip.appendChild(track);
+            strip.hidden = false;
+
+            function setStripSpeed() {
+                track.style.animationDuration = track.scrollWidth / 2 / 40 + 's';
+            }
+            setStripSpeed();
+
             window.addEventListener('resize', function () {
                 layout();
+                setStripSpeed();
                 if (current) position();
             });
         })();
