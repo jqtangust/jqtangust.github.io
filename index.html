@@ -237,6 +237,50 @@
                                 </td>
                             </tr>
 
+                            <tr onmouseout="unidata_stop()" onmouseover="unidata_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='unidata_image'>
+                                            <img src='images/UniData.png' width=100%>
+                                        </div>
+                                        <img src='images/UniData.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function unidata_start() {
+                                            document.getElementById('unidata_image').style.opacity = "1";
+                                        }
+
+                                        function unidata_stop() {
+                                            document.getElementById('unidata_image').style.opacity = "0";
+                                        }
+                                        unidata_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <a href="https://arxiv.org/abs/2610.11363">
+                                        <span class="papertitle">UniData: Universal Multimodal Instruction Generation
+                                            Pipeline</span>
+                                    </a>
+                                    <br>
+                                    <strong>Jiaqi Tang*</strong>, Yi-Feng Wu*, Yuting Zhang*, Hao Lu, Bowen Fu, Qing-Guo
+                                    Chen, Xiaogang Xu, Yuwei Hu, Shiyin Lu, Wei Wei, Lei Zhang, Zhao Xu, Weihua Luo,
+                                    Qifeng Chen†, Ying-Cong Chen†
+                                    <br>
+                                    <em>Findings of the Association for Computational Linguistics (EMNLP Findings)</em>,
+                                    2026
+                                    <br>
+                                    <a href="https://arxiv.org/abs/2610.11363">arXiv</a>
+                                    /
+                                    <a href="https://github.com/ATH-MaaS/Ovis">code</a>
+                                    /
+                                    <a href="data/TangEMNLP2026_UniData.bib">bibtex</a>
+                                    <p></p>
+                                    <p>
+                                        Turns a simple requirement into multi-round instructions across nine modalities.
+                                    </p>
+                                </td>
+                            </tr>
+
                             <tr onmouseout="iqat1_stop()" onmouseover="iqat1_start()">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
                                     <div class="one">
@@ -452,7 +496,7 @@
                                     <img src='images/LPO.png' width=100%>
                                 </td>
                                 <td style="padding:8px;width:80%;vertical-align:middle">
-                                    <a href="https://github.com/jqtangust/LPO">
+                                    <a href="https://github.com/ATH-MaaS/Ovis">
                                         <span class="papertitle">LPO: Towards Accurate GUI Agent Interaction via
                                             Location Preference Optimization</span>
                                     </a>
@@ -465,7 +509,7 @@
                                     <br>
                                     <a href="https://arxiv.org/abs/2506.09373">arXiv</a>
                                     /
-                                    <a href="https://github.com/jqtangust/LPO">code</a>
+                                    <a href="https://github.com/ATH-MaaS/Ovis">code</a>
                                     /
                                     <a href="data/Tang2025_LPO.bib">bibtex</a>
                                     <p></p>
