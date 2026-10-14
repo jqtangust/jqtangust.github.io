@@ -490,6 +490,10 @@ span.highlight {
   font-size: 13px;
 }
 
+.project-contribution a {
+  font-size: 13px;
+}
+
 .project-links {
   display: flex;
   flex-wrap: wrap;
