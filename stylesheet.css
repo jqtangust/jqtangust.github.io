@@ -410,29 +410,26 @@ span.highlight {
 
 .project-list {
   display: grid;
-  gap: 14px;
-  margin-top: 14px;
+  gap: 0;
+  margin-top: 10px;
 }
 
 .project-card {
   display: grid;
-  grid-template-columns: minmax(0, 218px) minmax(0, 1fr);
-  min-height: 138px;
-  overflow: hidden;
-  border: 1px solid #e5e9ef;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 4px 16px rgba(20, 38, 63, 0.06);
+  grid-template-columns: 20% minmax(0, 1fr);
+  align-items: center;
+  padding: 10px 0;
 }
 
 .project-visual {
   position: relative;
   display: flex;
-  min-height: 138px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #f2f5f8;
+  background: transparent;
 }
 
 .project-visual img,
@@ -448,41 +445,23 @@ span.highlight {
 }
 
 .project-visual--gca {
-  padding: 0;
   background: #07162c;
-  box-sizing: border-box;
 }
 
 .project-visual--ovis {
-  padding: 10px;
-  background: #f7f9fc;
+  padding: 8px;
   box-sizing: border-box;
 }
 
 .project-visual--ovis img {
-  width: 72%;
+  width: 78%;
   height: auto;
   object-fit: contain;
 }
 
-.project-video-label {
-  position: absolute;
-  left: 12px;
-  bottom: 10px;
-  padding: 4px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  background: rgba(4, 10, 18, 0.72);
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(6px);
-}
-
 .project-content {
   min-width: 0;
-  padding: 14px 16px;
+  padding: 6px 8px 6px 16px;
 }
 
 .project-heading {
@@ -493,7 +472,7 @@ span.highlight {
 }
 
 .project-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -548,16 +527,12 @@ span.highlight {
 
 @media (max-width: 600px) {
   .project-card {
-    grid-template-columns: 1fr;
-  }
-
-  .project-visual {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
+    grid-template-columns: 30% minmax(0, 1fr);
+    align-items: start;
   }
 
   .project-content {
-    padding: 13px 14px 14px;
+    padding: 2px 0 4px 12px;
   }
 
   .experience-item {
