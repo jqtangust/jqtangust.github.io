@@ -346,13 +346,14 @@ span.highlight {
 
 .project-list {
   display: grid;
-  gap: 10px;
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .project-card {
   display: grid;
-  grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
-  min-height: 132px;
+  grid-template-columns: minmax(0, 218px) minmax(0, 1fr);
+  min-height: 138px;
   overflow: hidden;
   border: 1px solid #e5e9ef;
   border-radius: 12px;
@@ -363,7 +364,7 @@ span.highlight {
 .project-visual {
   position: relative;
   display: flex;
-  min-height: 132px;
+  min-height: 138px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -380,10 +381,6 @@ span.highlight {
 
 .project-visual video {
   pointer-events: none;
-}
-
-.project-visual--contain img {
-  object-fit: contain;
 }
 
 .project-visual--gca {
@@ -421,7 +418,7 @@ span.highlight {
 
 .project-content {
   min-width: 0;
-  padding: 12px 15px;
+  padding: 14px 16px;
 }
 
 .project-heading {
@@ -451,24 +448,21 @@ span.highlight {
 }
 
 .project-description {
-  margin: 6px 0 7px;
+  margin: 7px 0 9px;
   color: #333333;
   font-size: 14px;
   line-height: 1.48;
 }
 
 .project-contribution {
-  margin: 0 0 7px;
-  padding: 5px 8px;
-  border-left: 3px solid #1772d0;
-  background: #f7f9fc;
-  color: #3d4652;
-  font-size: 12px;
+  margin: 7px 0 9px;
+  color: #333333;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 .project-contribution strong {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .project-links {
