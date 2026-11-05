@@ -120,6 +120,9 @@
                                 <td style="padding:16px;width:100%;vertical-align:middle">
                                     <h2>News</h2>
                                     <p class="news-latest">
+                                        • <strong>Nov 2026:</strong> We released <strong>DGP</strong>, which dynamically
+                                            connects every ViT layer to every LLM layer (<a
+                                            href="https://arxiv.org/abs/2611.06844">arXiv</a>).<br>
                                         • <strong>Oct 2026:</strong> We released Tencent Hy's
                                             <strong>Game-Creation-Agents (GCA)</strong>, an end-to-end agentic pipeline
                                             that turns a natural-language idea into a playable, verified browser game (<a
@@ -288,6 +291,42 @@
                     <table
                         style="width:100%;border:0px;border-spacing:0px 6px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
+
+                            <tr onmouseout="dgp_stop()" onmouseover="dgp_start()" bgcolor="#ffffd0">
+                                <td style="padding:12px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <div class="two" id='dgp_image'>
+                                            <img src='images/dgp.png' width=100%>
+                                        </div>
+                                        <img src='images/dgp.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function dgp_start() {
+                                            document.getElementById('dgp_image').style.opacity = "1";
+                                        }
+
+                                        function dgp_stop() {
+                                            document.getElementById('dgp_image').style.opacity = "0";
+                                        }
+                                        dgp_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:6px 8px;width:80%;vertical-align:middle">
+                                    <a href="https://arxiv.org/abs/2611.06844">
+                                        <span class="papertitle">Where to Connect? Boosting MLLMs via Dynamic Gated
+                                            Pathways across ALL ViT and LLM Layers</span>
+                                    </a>
+                                    <br>
+                                    Yingying Yan*, <strong>Jiaqi Tang*</strong>, Wei Wei†, Qianzhou Wang, Jianmin Chen,
+                                    Yuyang Xia, Botong Geng, Jinjian Wu, Lei Zhang, Qifeng Chen
+                                    <br>
+                                    <em>Neural Information Processing Systems (NeurIPS)</em>, 2026
+                                    <br>
+                                    <a href="https://arxiv.org/abs/2611.06844">arXiv</a>
+                                    /
+                                    <a href="data/YanNeurIPS2026_DGP.bib">bibtex</a>
+                                </td>
+                            </tr>
 
                             <tr onmouseout="rememberr1_stop()" onmouseover="rememberr1_start()">
                                 <td style="padding:12px;width:20%;vertical-align:middle">
